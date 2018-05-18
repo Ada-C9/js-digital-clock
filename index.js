@@ -5,10 +5,11 @@
 
 const displayTime = function displayTime() {
   let date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-
-  console.log(hours + ':' + minutes);
+  let localTime = date.toLocaleTimeString('en-US');
+  console.log(localTime);
+  // let hours = date.getHours();
+  // let minutes = date.getMinutes();
+  // console.log(hours + ':' + minutes);
 
 }
 
