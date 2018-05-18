@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 function readTime() {
 let dt = new Date();
 
@@ -24,8 +26,9 @@ let sec = dt.getSeconds();
 
 
 let display = m + ' ' + d + ',' + ' ' + y + '<br>' + hr + ":" + min + ":" + sec;
-$('#clock').append(`${display}`);
+$('#clock').html(`${display}`);
 }
 
+
 setInterval(readTime, 1000);
-clearInterval(readTime);
+});
