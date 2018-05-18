@@ -1,5 +1,12 @@
-const date = new Date();
+let dateTime = new Date();
+const interval = 1000;
+
+function updateTime() {
+  dateTime = new Date(dateTime.getTime() + interval);
+  $('#clock').html(dateTime.toString());
+}
 
 $(document).ready(function() {
-  $('#clock').html(date);
+  updateTime();
+  setInterval(updateTime, interval);
 });
