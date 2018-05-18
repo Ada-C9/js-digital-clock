@@ -6,10 +6,11 @@ body {
     height: 100px;
     width: 800px;
     margin: auto;
+    margin-top: 50px;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
+    padding-top: 80px;
+    font-family: curier, monospace;
     text-align: center;
     color: white;
     font-size: 80px;

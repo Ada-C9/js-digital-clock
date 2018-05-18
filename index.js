@@ -1,7 +1,7 @@
 // Your code here
 
-// $(document).ready(function() {
-  let date = new Date
+let getTime = function getTime() {
+  let date = new Date;
   let hours = date.getHours();
   let minutes = date.getMinutes();
   if (minutes < 10) {
@@ -15,5 +15,6 @@
 
 const target = document.getElementById('clock');
 target.innerHTML = `The time is...<h1> ${hours}:${minutes}:${seconds} </h1>`;
+};
 
-// })
+setInterval(getTime, 1000);
