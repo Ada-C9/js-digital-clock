@@ -33,7 +33,12 @@ const updateTime = () => {
   let currentTimeDisplay = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + amPM;
 
   // update the time
-  console.log(currentTimeDisplay);
+  // document.ready(getElementById('clock').firstChild.nodeValue = currentTimeDisplay;
+
+  $(document).ready(() => {
+    $('#clock').html('<p>' + currentTimeDisplay + '</p>')
+  });
 }
 
 updateTime();
+// TODO: Update time by 1 second intervals
