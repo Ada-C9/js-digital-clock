@@ -2,6 +2,8 @@ body {
     background-color: #80d4ea;
 }
 
+
+
 #clock {
     height: 100px;
     width: 800px;
@@ -11,6 +13,16 @@ body {
     padding-top: 70px;
     font-family: courier, monospace;
     text-align: center;
-    color: white;
     font-size: 100px;
+    color: white;
+}
+#date {
+    letter-spacing:10px;
+    font-size:16px;
+    font-family:courier,monospace;
+    color:#fff;
+    text-align: center;
+    padding-top: 300px;
+
+
 }
