@@ -21,7 +21,7 @@ const date = () => {
   let day = clock.getDate();
   let year = clock.getFullYear();
 
-  $('#date').append(`${MONTH[month]} ${day} ${year}`);
+  $('#date').append(`${MONTH[month]} ${day}, ${year}`);
 }
 
 const day = () => {
