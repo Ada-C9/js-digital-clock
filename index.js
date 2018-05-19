@@ -9,10 +9,11 @@ $(document).ready(function() {
     }
   });
 
-  setInterval( getTime, 1000);
+  setInterval( getWorldTimes, 1000);
 
-  function getTime() {
-    const currentDateTime = new Date(Date.now());
+  function getTime(offset) {
+    const currentDateTime = new Date();
+    currentDateTime.setMinutes(currentDateTime.getMinutes() + offset)
     let hours = currentDateTime.getHours();
     if ( $('#time-type').hasClass('to-military') && hours > 12) {
       hours = currentDateTime.getHours() - 12;
@@ -21,9 +22,24 @@ $(document).ready(function() {
     }
     const minutes = currentDateTime.getMinutes();
     const seconds = currentDateTime.getSeconds();
-    const date = currentDateTime.toDateString()
+    const date = currentDateTime.toDateString();
+    return `<p><strong>${hours} : ${minutes} : ${seconds}</strong></p><p>${date}</p>`;
+  }
 
-    $('#clock').html(`<p><strong>${hours} : ${minutes} : ${seconds}</strong></p><p>${date}</p>`);
+  function getWorldTimes() {
+      const offset = (new Date().getTimezoneOffset())
+    const worldOffsets = [
+      {area: 'Local', offset: 0},
+      {area: 'London', offset: offset + 60},
+      {area: 'New York', offset: offset - 5*60},
+      {area: 'Tokyo', offset: offset + 9*60}
+    ];
+    let clocks = ''
+    worldOffsets.forEach( (timezone) => {
+      clocks += `<div><h4>${timezone.area}</h4>${getTime(timezone.offset)}</div>`;
+    });
+    $( '#clock' ).html( clocks )
+
   }
 
 });
