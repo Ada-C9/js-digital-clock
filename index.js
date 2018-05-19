@@ -1,7 +1,16 @@
 // Your code here
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const months = [
+  "January", "February", "March",
+   "April", "May", "June", "July",
+   "August", "September", "October",
+   "November", "December"
+];
 
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const daysOfWeek = [
+  "Sunday", "Monday", "Tuesday",
+   "Wednesday", "Thursday",
+   "Friday", "Saturday"
+];
 
 const date = () => {
   let today = new Date();
@@ -16,6 +25,7 @@ const date = () => {
   let tick = setInterval(date,10);
 
   const timeRightNow = `${daysOfWeek[day]}, ${months[month]} ${numDay}, ${year} ${hr}:${min}:${sec}`;
+  
   $('#clock').html(timeRightNow);
 
 };
