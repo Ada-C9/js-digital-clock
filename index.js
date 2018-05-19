@@ -16,17 +16,17 @@ const digitalClock = () => {
 setInterval(digitalClock, 1000);
 
 const date = () => {
-  let clock = new Date();
-  let month = clock.getMonth();
-  let day = clock.getDate();
-  let year = clock.getFullYear();
+  let fullDate = new Date();
+  let month = fullDate.getMonth();
+  let day = fullDate.getDate();
+  let year = fullDate.getFullYear();
 
   $('#date').append(`${MONTH[month]} ${day}, ${year}`);
 }
 
 const day = () => {
-  let clock = new Date();
-  let weekDay = clock.getDay();
+  let day = new Date();
+  let weekDay = day.getDay();
   $('#day').append(`${DAY[weekDay]}`);
 }
 
