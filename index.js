@@ -23,9 +23,18 @@ ${date.getFullYear()}`;
 let legibleTime = `${getNominalHours(date.getHours())} :
 ${getNominalMinutes(date.getMinutes())} : ${date.getSeconds()}`;
 
-$('#clock').append(`<p>${legibleDate}</p>`);
-$('#clock').append(`<p>${legibleTime}</p>`);
+// $('#clock').append(`<p>${legibleDate}</p>`);
+// $('#clock').append(`<p>${legibleTime}</p>`);
 
+
+function updateDateTime() {
+  // $('#clock').empty()
+
+  $('#clock').append(`<p>${legibleDate}</p>`);
+  $('#clock').append(`<p>${legibleTime}</p>`);
+}
+
+setInterval(updateDateTime(), 1000);
 
 // or just use Date.prototype.getTime()
 console.log(legibleDate);
