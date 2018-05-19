@@ -6,9 +6,7 @@ $(document).ready(() => {
 
   function timer() {
     let d = new Date();
-    let t = d.toLocaleTimeString();
-    $('#clock').append(t);
+    let t = d.toLocaleTimeString('en-US', {hour12: false});
+    $('#clock').html(t);
   }
-
-
 });
