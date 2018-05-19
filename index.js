@@ -15,7 +15,7 @@ const date = () => {
 
   let tick = setInterval(date,10);
 
-  const timeRightNow = ` ${months[month]} ${numDay}, ${year} ${hr}:${min}:${sec}`;
+  const timeRightNow = `${daysOfWeek[day]}, ${months[month]} ${numDay}, ${year} ${hr}:${min}:${sec}`;
   $('#clock').html(timeRightNow);
 
 };
