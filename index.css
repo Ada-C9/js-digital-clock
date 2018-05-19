@@ -1,7 +1,9 @@
 body {
     background-color: #80d4ea;
-    background-image: url(https://images.unsplash.com/photo-1508726784386-ea208158dbe8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3fac7dba1e08e8df4e9fdb83de3db70&auto=format&fit=crop&w=1900&q=80);
+    background-image: url(https://images.unsplash.com/photo-1513106871424-b9e641f9d60f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95ad8d6b7bd93dc388d3aae79100f08f&auto=format&fit=crop&w=2376&q=80);
 }
+
+/*https://images.unsplash.com/photo-1508726784386-ea208158dbe8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3fac7dba1e08e8df4e9fdb83de3db70&auto=format&fit=crop&w=1900&q=80*/
 
 
 
@@ -11,9 +13,9 @@ body {
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
+    padding-top: 40px;
     font-family: courier, monospace;
     text-align: center;
-    color: white;
+    color: #D804DC;
     font-size: 100px;
 }
