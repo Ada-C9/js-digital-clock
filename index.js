@@ -38,7 +38,8 @@ const updateTime = () => {
   $(document).ready(() => {
     $('#clock').html('<p>' + currentTimeDisplay + '</p>')
   });
+
+  const timer = setInterval(updateTime, 1000);
 }
 
 updateTime();
-// TODO: Update time by 1 second intervals
