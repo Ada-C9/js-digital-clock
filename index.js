@@ -1,9 +1,13 @@
-$(document).ready(() => {
+
+$(document).ready(function() {
+  let date = new Date();
+  let day = date.toDateString();
+  let time = date.toLocaleTimeString();
+
   function currentTime() {
-    let date = new Date();
-    let time = date.toLocaleTimeString();
     $('#clock').text(time);
   }
+
  window.setInterval(currentTime, 1000);
 
-})
+});
