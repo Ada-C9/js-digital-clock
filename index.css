@@ -14,12 +14,15 @@ body {
     font-family: courier, monospace;
     text-align: center;
     font-size: 100px;
-     color: white;
+    color: white;
 }
 #date {
     letter-spacing:10px;
     font-size:16px;
     font-family:courier,monospace;
     color:#fff;
+    text-align: center;
+    padding-top: 300px;
+
 
 }

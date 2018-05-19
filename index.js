@@ -1,6 +1,6 @@
 //Your code here
 function showTime() {
-  let today  = new Date();
+  const today  = new Date();
   let h = today.getHours();  // 0-23
   let m = today.getMinutes(); // 0-59
   let s = today.getSeconds(); // 0-59
@@ -22,13 +22,13 @@ function showTime() {
   let time = h + ':' + m + ':' + s + ' ' + session;
   document.getElementById('clock').innerHTML = time;
 
-  let  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  let curWeekDay = days[today.getDay()];
-  let curDay = today.getDate();
-  let curMonth = months[today.getMonth()];
-  let curYear = today.getFullYear();
-  let date = curWeekDay + ', ' + curDay + ' ' + curMonth + ' ' + curYear;
+  const  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const curWeekDay = days[today.getDay()];
+  const curDay = today.getDate();
+  const curMonth = months[today.getMonth()];
+  const curYear = today.getFullYear();
+  const date = curWeekDay + ', ' + curDay + ' ' + curMonth + ' ' + curYear;
   document.getElementById('date').innerHTML = date;
 
 }
