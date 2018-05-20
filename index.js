@@ -11,8 +11,8 @@ const updateDate = function updateDate(){
   let minutes = addLeadingZero(date.getMinutes());
   let seconds = addLeadingZero(date.getSeconds());
   let today = date.toDateString();
-  let dateNow = $('<p>' + today + '</p>' + '<p>' + hour + ":" + minutes + ":" + seconds + '</p>')
-  $('#clock').html(dateNow);
+  let dateString = $('<p>' + today + '</p>' + '<p>' + hour + ":" + minutes + ":" + seconds + '</p>')
+  $('#clock').html(dateString);
 }
 
 $(document).ready(function() {
