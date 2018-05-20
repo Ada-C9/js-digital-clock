@@ -24,11 +24,16 @@ setInterval(function () {
   ${getNominalMinutesSeconds(date1.getMinutes())} : ${getNominalMinutesSeconds(date1.getSeconds())}`;
 
   $('#clock1').empty();
-  $('#clock1').append('<li>Pacific Time Zone 1</li>')
+  $('#clock1').append('<li>Pacific US Time</li>')
   $('#clock1').append(`<li>${legibleDate1}</li>`);
   $('#clock1').append(`<li>${legibleTime1}</li>`);
 
   let date2 = new Date()
+  // do I have to reset this value to date2?
+  //why doesnt it work like this:
+  // date2 = date2.setHours(date2.getHours() + 3);
+  date2.setHours(date2.getHours() + 3);
+
 
   let legibleDate2 = `${getMonthName(date2.getMonth())} ${date2.getDay()},
   ${date2.getFullYear()}`;
@@ -37,11 +42,13 @@ setInterval(function () {
   ${getNominalMinutesSeconds(date2.getMinutes())} : ${getNominalMinutesSeconds(date2.getSeconds())}`;
 
   $('#clock2').empty();
-  $('#clock2').append('<li>Pacific Time Zone 2</li>')
+  $('#clock2').append('<li>Eastern US Time</li>')
   $('#clock2').append(`<li>${legibleDate2}</li>`);
   $('#clock2').append(`<li>${legibleTime2}</li>`);
 
   let date3 = new Date()
+  date3.setHours(date3.getHours() + 7);
+
 
   let legibleDate3 = `${getMonthName(date3.getMonth())} ${date3.getDay()},
   ${date3.getFullYear()}`;
@@ -50,11 +57,12 @@ setInterval(function () {
   ${getNominalMinutesSeconds(date3.getMinutes())} : ${getNominalMinutesSeconds(date3.getSeconds())}`;
 
   $('#clock3').empty();
-  $('#clock3').append('<li>Pacific Time Zone 3</li>')
+  $('#clock3').append('<li>UTC Time Zone</li>')
   $('#clock3').append(`<li>${legibleDate3}</li>`);
   $('#clock3').append(`<li>${legibleTime3}</li>`);
 
   let date4 = new Date()
+  date4.setHours(date4.getHours() + 9);
 
   let legibleDate4 = `${getMonthName(date4.getMonth())} ${date4.getDay()},
   ${date4.getFullYear()}`;
@@ -63,7 +71,7 @@ setInterval(function () {
   ${getNominalMinutesSeconds(date4.getMinutes())} : ${getNominalMinutesSeconds(date4.getSeconds())}`;
 
   $('#clock4').empty();
-  $('#clock4').append('<li>Pacific Time Zone 4</li>')
+  $('#clock4').append('<li>Troll Station Antartica Time</li>')
   $('#clock4').append(`<li>${legibleDate4}</li>`);
   $('#clock4').append(`<li>${legibleTime4}</li>`);
 }, 1000);
