@@ -1,29 +1,36 @@
-// Your code here
-// class Clock {
-//   constructor() {
-//     this.date = this.setDate();
-//     this.hour = this.date.getHours();
-//     this.minute = this.date.getMinutes();
-//     this.second = this.date.getSeconds();
-//   }
-//   setDate() {
-//     this.date = new Date();
-//     this.hour = this.date.getHours();
-//     this.minute = this.date.getMinutes();
-//     this.second = this.date.getSeconds();
-//     return this.date
-//   }
-// }
+let myClock = () => {
+  let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  let now = new Date();
+  let time = now.toLocaleTimeString('en-US');
+  let date = now.toLocaleString('en-US', options)
 
-const myClock = () => {
-    let date = new Date();
-    document.getElementById("clock").innerHTML = date.toLocaleTimeString();
+  $("#clock").html(`<div class="time">${time}</div><div class="date">${date}</div>`);
 };
 
-let mySeconds = setInterval(myClock, 1000)
+setInterval(myClock, 1000);
 
 
-$(document).ready(function() {
-  myClock();
-  mySeconds;
-});
+let worldClock = () => {
+  $("#clock").append('<div class="world-clocks"></div>')
+  let now = new Date();
+  let locations = {'Manila': 'Asia/Manila', 'London': 'Europe/London', 'Timbuktu': 'Africa/Timbuktu'};
+
+  for (let location in locations) {
+    let options = {};
+    options.timeZone = locations[location];
+
+    $("#clock .world-clocks").append(`
+      <div class="${location}">
+      ${now.toLocaleString('en-US', options)}
+      <h3> ${location} </h3>
+      </div>
+      `);
+    }
+  };
+
+  setInterval(worldClock, 1000);
+
+  $(document).ready(function() {
+    myClock();
+    worldClock();
+  });
