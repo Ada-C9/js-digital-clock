@@ -4,13 +4,19 @@ $(document).ready(function() {
 setInterval(function(){ myTimer() }, 1000);
 
 
+
   function myTimer() {
     let d = new Date();
-    let t = d.toLocaleTimeString();
+    let time = d.toLocaleTimeString();
 
-    $('#clock').html(t);
+    let month = d.getMonth()+1;
+    let day = d.getDate();
+
+    let output = (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day
+    + '/' + d.getFullYear() + ' ' + time;
+
+    $('#clock').html(output);
 }
-
 
 
 }) // end of document.ready(function
