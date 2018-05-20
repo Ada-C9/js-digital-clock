@@ -23,10 +23,10 @@ setInterval(function () {
   let legibleTime1 = `${getNominalHours(date1.getHours())} :
   ${getNominalMinutesSeconds(date1.getMinutes())} : ${getNominalMinutesSeconds(date1.getSeconds())}`;
 
-  $('#clock').empty();
-  $('#clock').append('<p>Pacific Time Zone 1</p>')
-  $('#clock').append(`<p>${legibleDate1}</p>`);
-  $('#clock').append(`<p>${legibleTime1}</p>`);
+  $('#clock1').empty();
+  $('#clock1').append('<li>Pacific Time Zone 1</li>')
+  $('#clock1').append(`<li>${legibleDate1}</li>`);
+  $('#clock1').append(`<li>${legibleTime1}</li>`);
 
   let date2 = new Date()
 
@@ -36,9 +36,10 @@ setInterval(function () {
   let legibleTime2 = `${getNominalHours(date2.getHours())} :
   ${getNominalMinutesSeconds(date2.getMinutes())} : ${getNominalMinutesSeconds(date2.getSeconds())}`;
 
-  $('#clock').append('<p>Pacific Time Zone 2</p>')
-  $('#clock').append(`<p>${legibleDate2}</p>`);
-  $('#clock').append(`<p>${legibleTime2}</p>`);
+  $('#clock2').empty();
+  $('#clock2').append('<li>Pacific Time Zone 2</li>')
+  $('#clock2').append(`<li>${legibleDate2}</li>`);
+  $('#clock2').append(`<li>${legibleTime2}</li>`);
 
   let date3 = new Date()
 
@@ -48,9 +49,10 @@ setInterval(function () {
   let legibleTime3 = `${getNominalHours(date3.getHours())} :
   ${getNominalMinutesSeconds(date3.getMinutes())} : ${getNominalMinutesSeconds(date3.getSeconds())}`;
 
-  $('#clock').append('<p>Pacific Time Zone 3</p>')
-  $('#clock').append(`<p>${legibleDate3}</p>`);
-  $('#clock').append(`<p>${legibleTime3}</p>`);
+  $('#clock3').empty();
+  $('#clock3').append('<li>Pacific Time Zone 3</li>')
+  $('#clock3').append(`<li>${legibleDate3}</li>`);
+  $('#clock3').append(`<li>${legibleTime3}</li>`);
 
   let date4 = new Date()
 
@@ -60,9 +62,10 @@ setInterval(function () {
   let legibleTime4 = `${getNominalHours(date4.getHours())} :
   ${getNominalMinutesSeconds(date4.getMinutes())} : ${getNominalMinutesSeconds(date4.getSeconds())}`;
 
-  $('#clock').append('<p>Pacific Time Zone 4</p>')
-  $('#clock').append(`<p>${legibleDate4}</p>`);
-  $('#clock').append(`<p>${legibleTime4}</p>`);
+  $('#clock4').empty();
+  $('#clock4').append('<li>Pacific Time Zone 4</li>')
+  $('#clock4').append(`<li>${legibleDate4}</li>`);
+  $('#clock4').append(`<li>${legibleTime4}</li>`);
 }, 1000);
 
 
