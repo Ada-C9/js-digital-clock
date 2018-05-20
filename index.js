@@ -40,25 +40,17 @@ function updateCairoTime() {
 
 function updateShanghaiTime() {
   ShanghaiTime = new Date(ShanghaiTime.getTime() + interval);
-  $('#shanghai').html(`<strong>Shanghai, China: </strong><br>${ShanghaiTime.toString().split(' ').slice(0, 5).join(' ')}`);
+  $('#shanghai').html(`<strong>Shanghai, China: </strong><br>
+    ${ShanghaiTime.toString().split(' ').slice(0, 5).join(' ')}`);
 }
 
 $(document).ready(() => {
   updateTime();
   setInterval(updateTime, interval);
-});
-
-$(document).ready(() => {
   updateDCTime();
-  setInterval(updateDCTime, 1000);
-});
-
-$(document).ready(() => {
+  setInterval(updateDCTime, interval);
   updateCairoTime();
   setInterval(updateCairoTime, interval);
-});
-
-$(document).ready(() => {
   updateShanghaiTime();
   setInterval(updateShanghaiTime, interval);
 });
