@@ -13,8 +13,7 @@ let getTime = function getTime() {
     seconds = '0' + seconds;
   }
 
-const target = document.getElementById('clock');
-target.innerHTML = `The time is...<h1> ${hours}:${minutes}:${seconds} </h1>`;
+$('#clock').html(`The time is...<h1> ${hours}:${minutes}:${seconds} </h1>`);
 };
 
 setInterval(getTime, 1000);
