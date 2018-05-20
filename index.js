@@ -9,18 +9,15 @@ const twoDigitTime = (time) => {
 };
 
 const getTime = () => {
-  const dateThing = new Date();
+  const date = new Date();
 
-  let hours = twoDigitTime(dateThing.getHours());
-  let minutes = twoDigitTime(dateThing.getMinutes());
-  let seconds = twoDigitTime(dateThing.getSeconds());
+  let hours = twoDigitTime(date.getHours());
+  let minutes = twoDigitTime(date.getMinutes());
+  let seconds = twoDigitTime(date.getSeconds());
 
-  let displayDate = `${dateThing.toLocaleDateString()} ${hours}:${minutes}:${seconds}`;
+  let displayDate = `${date.toLocaleDateString()} ${hours}:${minutes}:${seconds}`;
   $('#clock').html(displayDate);
 };
-
-
-
 
 
 $(document).ready(() => {
