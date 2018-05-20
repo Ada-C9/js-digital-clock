@@ -3,8 +3,6 @@ $(document).ready(function() {
 
 setInterval(function(){ myTimer() }, 1000);
 
-
-
   function myTimer() {
     let d = new Date();
     let time = d.toLocaleTimeString();
@@ -18,5 +16,4 @@ setInterval(function(){ myTimer() }, 1000);
     $('#clock').html(output);
 }
 
-
-}) // end of document.ready(function
+})
