@@ -1,12 +1,23 @@
 body {
-    background-color: #80d4ea;
+    background-color: #4D8FAC;
+}
+
+#border {
+  border: solid 1.5em white;
+  width: 80%;
+  margin: auto;
+  background-color: #5D8CAE;
 }
 
 #seattle, #dc, #cairo, #shanghai {
     margin: .05em auto;
-    padding-top: 1.5em;
+    padding-top: 1.25em;
     font-family: courier, monospace;
     text-align: center;
     color: white;
     font-size: 40px;
+}
+
+#shanghai {
+  padding-bottom: 1.25em;
 }
