@@ -14,3 +14,23 @@ body {
     color: white;
     font-size: 100px;
 }
+
+#clock .world-clocks {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  padding-top: 5vh;
+}
+
+.world-clocks div:nth-of-type(1n + 1) {
+  border: solid 1px white;
+  border-radius: 25%;
+  padding: 5vh;
+  width: 15vw;
+  height: auto;
+  font-size: .25em;
+}
+
+#clock div.date {
+  font-size: .5em;
+}
