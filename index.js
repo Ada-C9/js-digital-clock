@@ -54,3 +54,16 @@ $(document).ready(() => {
   updateShanghaiTime();
   setInterval(updateShanghaiTime, interval);
 });
+
+$(document).ready(() => {
+  $('button').click ( function() {
+    if ($(this).html() === 'Lilac') {
+      $('#border').css('background-color', '#D7BDE2');
+    } else if ($(this).html() === 'Pink') {
+      $('#border').css('background-color', '#F5B7B1');
+    } else if ($(this).html() === 'Blue') {
+      $('#border').css('background-color', '#5D8CAE');
+    }
+    // alert (`Got a click on a button "${$(this).html()}"`);
+  });
+});

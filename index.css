@@ -9,15 +9,25 @@ body {
   background-color: #5D8CAE;
 }
 
-#seattle, #dc, #cairo, #shanghai {
+#seattle, #dc, #cairo, #shanghai, h3 {
     margin: .05em auto;
-    padding-top: 1.25em;
+    padding-top: 1em;
     font-family: courier, monospace;
     text-align: center;
     color: white;
-    font-size: 40px;
+    font-size: 35px;
 }
 
-#shanghai {
-  padding-bottom: 1.25em;
+h3 {
+  padding-bottom: .5em;
+}
+
+button {
+  display: inline-table;
+  margin: .25em auto;
+  font-family: courier, monospace;
+  align: center;
+  color: white;
+  font-size: 35px;
+  background-color: black;
 }
