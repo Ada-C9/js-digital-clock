@@ -25,7 +25,7 @@ const date = () => {
   let tick = setInterval(date,10);
 
   const timeRightNow = `${daysOfWeek[day]}, ${months[month]} ${numDay}, ${year} ${hr}:${min}:${sec}`;
-  
+
   $('#clock').html(timeRightNow);
 
 };
@@ -34,5 +34,18 @@ const date = () => {
 
 $(document).ready(() => {
   date();
+  $('button').click(function(){
+    let target = $(this);
+    console.log('button is clicked');
+
+    let color = target[0].textContent;
+    if (color === 'purple') {
+       $('body').addClass('purple');
+    } else if (color === 'blue') {
+      $('body').addClass('blue');
+    } else if (color === 'pink') {
+      $('body').addClass('hotpink');
+    }
+  });
 
 });
