@@ -1,17 +1,25 @@
-// dateObj.setSeconds(secondsValue)
 
-function myClock() {
+function myLocalClock() {
   let date = new Date();
   let timeString = date.toLocaleTimeString();
-
-  let clock = document.getElementById("clock");
-  clock.textContent = timeString;
+  $('#clock').html(timeString);
+  let dateString = date.toDateString();
+  $('#date').html(dateString);
 }
 
-let myInterval = setInterval(function() {
-  myClock();
-}, 1000);
+function myIntlClocks() {
+  let date = new Date();
+  let localTime = date.getTime();
+  let localOffset = date.getTimezoneOffset() * 60000;
+  let utc = localTime + localOffset;
+  
+  let telAvivOffset = 3;
+  let telAvivDateTime = utc + (3600000 * telAvivOffset);
+  let telAvivFinal = new Date(telAvivDateTime);
+  $('#telaviv').html(telAvivFinal);
+}
 
-$(document).ready(function() {
-  myInterval();
+$(document).ready(() => {
+  setInterval(myLocalClock, 1000);
+  setInterval(myIntlClocks, 1000);
 });
