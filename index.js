@@ -31,7 +31,7 @@ $(document).ready(function() {
     const worldOffsets = [
       {area: 'Local', offset: 0},
       {area: 'London', offset: offset + 60},
-      {area: 'New York', offset: offset - 5*60},
+      {area: 'New York', offset: offset - 4*60},
       {area: 'Tokyo', offset: offset + 9*60}
     ];
     let clocks = ''

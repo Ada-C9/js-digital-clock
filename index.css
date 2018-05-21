@@ -6,16 +6,24 @@ body {
 }
 
 #clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    margin-top: 70px;
-    font-size: 85px;
+    margin-top: 15px;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+#clock > div {
+  font-size: 50px;
+  border: 2.5px solid white;
 }
 
 #time-type {
   font-size: 30px;
   font-weight: bold;
+  padding: 2.5px 0;
+}
+
+#time-type:hover {
+  color: #80d4ea;
+  background-color: white;
 }
