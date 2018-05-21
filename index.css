@@ -24,10 +24,13 @@ body {
   font-size: 100px;
 }
 
-.button{
+button {
   color: white;
+  font-size: 1.75em;
+  background-color: inherit;
   font-weight: bold;
   display: inline-block;
+  min-width: 17vw;
   border: solid white 1px;
   margin: 1vw;
   padding: 1vw;
