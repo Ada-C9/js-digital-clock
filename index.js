@@ -1,9 +1,9 @@
 // Your code here
   function showTime(){
       let date = new Date();
-      let h = date.getHours(); // 0 - 23
-      let m = date.getMinutes(); // 0 - 59
-      let s = date.getSeconds(); // 0 - 59
+      let h = date.getHours();
+      let m = date.getMinutes();
+      let s = date.getSeconds(); 
       let session = "AM";
 
       if(h == 0){
@@ -22,7 +22,7 @@
       let time = h + ":" + m + ":" + s + " " + session;
       document.getElementById("clock").innerText = time;
       document.getElementById("clock").textContent = time;
-      
+
       setInterval(showTime, 1000);
 
   }
