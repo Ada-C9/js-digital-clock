@@ -32,61 +32,70 @@ $(document).ready(function() {
   }
 
   function getWorldTimes() {
-      const offset = (new Date().getTimezoneOffset())
-      // const colorChoices = '<ul class="color-list"><li class="red-choice">RED</li><li class="blue-choice">BLUE</li><li class="purple-choice">PURPLE</li><li class="green-choice">GREEN</li></ul>'
+    const offset = (new Date().getTimezoneOffset())
     const worldOffsets = [
-      {area: 'Local', offset: 0},
-      {area: 'London', offset: offset + 60},
-      {area: 'New York', offset: offset - 4*60},
-      {area: 'Tokyo', offset: offset + 9*60}
+      {div: 1, area: 'Local', offset: 0},
+      {div: 2, area: 'London', offset: offset + 60},
+      {div: 3, area: 'New York', offset: offset - 4*60},
+      {div: 4, area: 'Tokyo', offset: offset + 9*60}
     ];
-    let clocks = ''
-    worldOffsets.forEach( (timezone) => {
-      clocks += `<div><h4>${timezone.area}</h4>${getTime(timezone.offset)}</div>`;
-    });
-    $( '#clock' ).html( clocks );
-  }
 
+    worldOffsets.forEach( (timezone) => {
+      $( `#timezone-${timezone.div}` ).html(`<div><h4>${timezone.area}</h4>${getTime(timezone.offset)}</div>`);
+    });
+  }
+  const colorOptions = '<ul class="color-list"><li class="red-choice">RED</li><li class="blue-choice">BLUE</li><li class="purple-choice">PURPLE</li><li class="green-choice">GREEN</li></ul>'
+  $('.timezone').prepend(colorOptions)
   $('.red-choice').click( function() {
-    if ( $('body').hasClass('green') ) {
-      $('body').removeClass('green');
+    if ( $( this ).parent().parent().hasClass('green') ) {
+      $( this ).parent().parent().removeClass('green');
     }
-    if ( $('body').hasClass('purple')) {
-      $('body').removeClass('purple');
+    if ( $( this ).parent().parent().hasClass('purple')) {
+      $( this ).parent().parent().removeClass('purple');
     }
-    $('body').addClass('red');
+    if ( $( this ).parent().parent().hasClass('blue')) {
+      $( this ).parent().parent().removeClass('blue');
+    }
+    $( this ).parent().parent().addClass('red');
   });
 
 
-  $('.blue-choice').click( function() {
-    if ( $('body').hasClass('green') ) {
-      $('body').removeClass('green');
+  $('*').on('click', '.blue-choice', function() {
+    if ( $( this ).parent().parent().hasClass('green') ) {
+      $( this ).parent().parent().removeClass('green');
     }
-    if ( $('body').hasClass('purple')) {
-      $('body').removeClass('purple');
+    if ( $( this ).parent().parent().hasClass('purple')) {
+      $( this ).parent().parent().removeClass('purple');
     }
-    if ($('body').hasClass('red')) {
-      $('body').removeClass('red');
+    if ($( this ).parent().parent().hasClass('red')) {
+      $( this ).parent().parent().removeClass('red');
     }
+    $( this ).parent().parent().addClass('blue');
   });
 
   $('.green-choice').click( function() {
-    if ( $('body').hasClass('purple') ) {
-      $('body').removeClass('purple');
+    if ( $( this ).parent().parent().hasClass('purple') ) {
+      $( this ).parent().parent().removeClass('purple');
     }
-    if ( $('body').hasClass('red')) {
-      $('body').removeClass('red');
+    if ( $( this ).parent().parent().hasClass('red')) {
+      $( this ).parent().parent().removeClass('red');
     }
-    $('body').addClass('green');
+    if ( $( this ).parent().parent().hasClass('blue')) {
+      $( this ).parent().parent().removeClass('blue');
+    }
+    $( this ).parent().parent().addClass('green');
   });
 
   $('.purple-choice').click( function() {
-    if ( $('body').hasClass('green') ) {
-      $('body').removeClass('green');
+    if ( $( this ).parent().parent().hasClass('green') ) {
+      $( this ).parent().parent().removeClass('green');
     }
-    if ( $('body').hasClass('red')) {
-      $('body').removeClass('red');
+    if ( $( this ).parent().parent().hasClass('red')) {
+      $( this ).parent().parent().removeClass('red');
     }
-    $('body').addClass('purple');
+    if ( $( this ).parent().parent().hasClass('blue')) {
+      $( this ).parent().parent().removeClass('blue');
+    }
+    $( this ).parent().parent().addClass('purple');
   });
 });
