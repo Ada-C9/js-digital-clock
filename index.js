@@ -78,7 +78,7 @@ $(document).ready(() => {
   }, 1000);
 
   $('#red').click( function() {
-    $('.clock').removeClass();
+    $('#clock').removeClass();
     $('#clock').addClass('red');
   });
 
@@ -90,10 +90,5 @@ $(document).ready(() => {
   $('#yellow').click( function() {
     $('#clock').removeClass();
     $('#clock').addClass('yellow');
-  });
-
-  $('#default').click( function() {
-    $('#clock').removeClass();
-    $('#clock').addClass('default');
   });
 });
