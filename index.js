@@ -1,25 +1,36 @@
-// Your code here
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-"October", "November", "December"];
-
-const WEEKS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
+// // Your code here
 
 const timeBuilder = () => {
-  let seattleTime = new Date();
-  let time = '';
-  time += seattleTime.getFullYear();
-  time += ' ' + MONTHS[seattleTime.getMonth() - 1];
-  time += ' ' + seattleTime.getDate();
-  time += ',' + WEEKS[seattleTime.getDay()];
-  time += ' ' + seattleTime.getHours();
-  time += ':' + seattleTime.getMinutes();
-  time += ':' + seattleTime.getSeconds();
-  $('#clock').html(time);
+	let newDate = new Date();
+	let date = newDate.toString();
+  $('#seattle-clock').html(date);
 };
 
-let runClock = setInterval(timeBuilder, 1000);
+const londonTime = () => {
+	let newDate = new Date();
+  let date = newDate.toUTCString();
+
+  $('#london-clock').html(date);
+};
+
+const beijingTime = () => {
+	let date = new Date();
+  let newDate = new Date(date.getTime() + (date.getTimezoneOffset() * 128570 ));
+
+  $('#beijing-clock').html(newDate);
+};
+
 
 $(document).ready( () => {
-  $('#clock').html(runClock);
+  $('#seattle').click( () => {
+     setInterval(timeBuilder, 1000);
+  });
+
+	$('#london').click( () => {
+		setInterval(londonTime, 1000);
+	})
+
+	$('#beijing').click( () => {
+		setInterval(beijingTime, 1000);
+	})
 })
