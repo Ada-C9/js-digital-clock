@@ -34,12 +34,26 @@ const updateTime = () => {
 
   // update the time
   // document.ready(getElementById('clock').firstChild.nodeValue = currentTimeDisplay;
-
-  $(document).ready(() => {
-    $('#clock').html('<p>' + currentTimeDisplay + '</p>')
-  });
-
-  const timer = setInterval(updateTime, 1000);
+  $('#clock').html('<p>' + currentTimeDisplay + '</p>')
 }
 
-updateTime();
+$(document).ready(() => {
+  const timer = setInterval(updateTime, 1000);
+  // where click event stuff happens
+  // need to include event that will assign color class to the clock
+  $('button').click( function(event) {
+    let buttonClicked = this.innerHTML;
+    // alert(`Got a click on an <li> containing "${$(this).html()}"`);
+    console.log(buttonClicked);
+    if (buttonClicked === 'Orange') {
+      let colorClass = 'orange'
+      $('#clock').removeClass().addClass(colorClass);
+    } else if (buttonClicked === 'Green!') {
+      let colorClass = 'green'
+      $('#clock').removeClass().addClass(colorClass);
+    } else if (buttonClicked === 'Yellow!') {
+      let colorClass = 'yellow'
+      $('#clock').removeClass().addClass(colorClass);
+    }
+  });
+});
