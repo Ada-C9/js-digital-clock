@@ -41,16 +41,6 @@ const LOCATIONS = [
       );}
     );}
 
-  //   let chileTime = new Date();
-  //   chileTime.setHours(chileTime.getHours() + 3);
-  //   $(`#chileclock`).html(
-  //     chileTime.getHours() + ":" + chileTime.getMinutes() + ":" + chileTime.getSeconds()
-  //   );
-  //   $(`#chileclock`).append(
-  //     "<br>Santiago, Chile</br>"
-  //   );
-  // }
-
 
   setInterval(updateClock, 1000);
   setInterval(updateChile, 1000);

@@ -7,6 +7,25 @@ ul {
   margin-top: 100px;
 }
 
+.gray {
+  background-color: #aaa;
+  color: darkgrey;
+}
+
+.pink {
+  background-color: rgb(222, 150, 202);
+  color: rgb(108, 144, 130);
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.blue {
+  background-color: #80d4ea;
+}
+
 #clock, #chileclock , #londonclock, #tokioclock{
     height: 100px;
     width: 800px;
