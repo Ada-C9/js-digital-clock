@@ -55,3 +55,8 @@ button:hover {
   color: #F5B7B1;
   border: 3px solid #F5B7B1;
 }
+
+.time-btn {
+  background-color: white;
+  color: #4D8FAC;
+}
