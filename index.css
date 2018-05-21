@@ -1,5 +1,22 @@
+
+.black {
+  background-color: rgb(1, 0, 3);
+}
+
+.pink {
+  background-color: rgb(164, 0, 132);
+}
+
+.green {
+  background-color: rgb(63, 213, 26);
+}
+
+.indigo {
+  background-color: rgb(42, 26, 103)
+}
+
 body {
-    background-color: #80d4ea;
+  background-color: #80d4ea;
 }
 
 #clock {
