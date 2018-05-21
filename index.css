@@ -29,5 +29,20 @@ button {
   align: center;
   color: white;
   font-size: 35px;
-  background-color: black;
+  background-color: white;
+}
+
+#blue {
+  color: #5D8CAE;
+  border: 3px solid #5D8CAE;
+}
+
+#lilac {
+  color: #D7BDE2;
+  border: 3px solid #D7BDE2;
+}
+
+#pink {
+  color: #F5B7B1;
+  border: 3px solid #F5B7B1;
 }
