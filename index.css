@@ -1,16 +1,36 @@
 body {
-    background-color: #80d4ea;
+  background-color: #80d4ea;
+}
+
+.black {
+  background-color: black;
+}
+
+.grey {
+  background-color: darkgrey;
+}
+
+.pink {
+  background-color: lightpink;
 }
 
 #clock {
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+  margin: auto;
+  position: absolute;
+  padding-top: 70px;
+  font-family: courier, monospace;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+}
+
+.button{
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  border: solid white 1px;
+  margin: 1vw;
+  padding: 1vw;
 }
 
 #clock > div {
