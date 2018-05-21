@@ -1,16 +1,5 @@
 body {
-    background-color: #80d4ea;
-}
-
-#clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
-}
+    background: linear-gradient(rgb(202, 233, 190), rgb(4, 136, 38));
+    height: 1000px;
+		font-size: 2rem;
+};

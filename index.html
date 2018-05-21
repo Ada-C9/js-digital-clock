@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Clock Tower</title>
-      <meta charset="utf-8">
-      <link href="index.css" media="screen" rel="stylesheet" type="text/css"/>
-  </head>
+<head>
+  <title>Clock Tower</title>
+  <meta charset="utf-8">
+  <link href="index.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
 
-  <body>
-      <div id='clock'></div>
-  </body>
+<body>
+  <header>
+    <h1>World Clock</h1>
+		<h5>Click city to see local time</h5>
+  </header>
+  <ul id="city-list">
+  <li id="seattle">Seattle</li>
+	<div id="seattle-clock"></div>
+  <li id="london">London</li>
+	<div id="london-clock"></div>
+	<li id="beijing">Beijing</li>
+
+	<div id="beijing-clock"></div>
+
+  </ul>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
 </html>
-
-<script src="index.js"></script>
