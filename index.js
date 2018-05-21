@@ -1,21 +1,30 @@
 // Your code here
+  function showTime(){
+      let date = new Date();
+      let h = date.getHours(); // 0 - 23
+      let m = date.getMinutes(); // 0 - 59
+      let s = date.getSeconds(); // 0 - 59
+      let session = "AM";
 
-      const clocks = document.getElementsByClassName("clock");
-
-      function updateClocks() {
-        for (let clock of clocks) {
-          let timezone = clock.dataset.timezone;
-          let time = new Date().toLocaleTimeString("en-US", {
-            hour: '2-digit',
-            minute:'2-digit',
-            second:'2-digit',
-            timeZone: timezone
-          });
-          clock.textContent = time;
-        }
+      if(h == 0){
+          h = 12;
       }
 
+      if(h > 12){
+          h = h - 12;
+          session = "PM";
+      }
 
-  setInterval(updateClocks, 1000);
-  
-  updateClocks();
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      let time = h + ":" + m + ":" + s + " " + session;
+      document.getElementById("clock").innerText = time;
+      document.getElementById("clock").textContent = time;
+      
+      setInterval(showTime, 1000);
+
+  }
+
+  showTime();
