@@ -3,8 +3,6 @@ body {
 }
 
 #clock {
-    height: 100px;
-    width: 800px;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
@@ -13,4 +11,8 @@ body {
     text-align: center;
     color: white;
     font-size: 100px;
+}
+
+#clock > div {
+  margin-bottom: 10vh;
 }
