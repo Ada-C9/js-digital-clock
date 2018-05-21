@@ -19,17 +19,25 @@ body {
 }
 
 h3 {
-  padding-bottom: .5em;
+  padding-bottom: .1em;
+}
+
+.btn-group {
+  text-align: center;
+  padding-bottom: .5em
 }
 
 button {
-  display: inline-table;
   margin: .25em auto;
   font-family: courier, monospace;
-  align: center;
-  color: white;
-  font-size: 35px;
+  align-content: center;
+  font-size: 25px;
   background-color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #blue {
