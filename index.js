@@ -44,6 +44,18 @@ function updateShanghaiTime() {
     ${ShanghaiTime.toString().split(' ').slice(0, 5).join(' ')}`);
 }
 
+function format12HourTime(time) {
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+  let ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  let strTime = time.toString().split(' ').slice(1, 4).join(' ');
+  strTime = strTime + hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+
 $(document).ready(() => {
   updateTime();
   setInterval(updateTime, interval);
