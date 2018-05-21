@@ -2,6 +2,9 @@
   <code_scheme name="Project" version="173">
     <option name="AUTODETECT_INDENTS" value="false" />
     <option name="RIGHT_MARGIN" value="100" />
+    <JSCodeStyleSettings>
+      <option name="USE_DOUBLE_QUOTES" value="false" />
+    </JSCodeStyleSettings>
     <codeStyleSettings language="HTML">
       <indentOptions>
         <option name="INDENT_SIZE" value="2" />

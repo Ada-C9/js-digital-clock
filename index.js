@@ -1,20 +1,18 @@
 $(document).ready(() => {
-  let time = window.setInterval(timeCallback, 100);
+  setInterval(timeCallback, 1000);
 
 	function timeCallback() {
 		let currTime = new Date();
 		let currHours = formatTime(currTime.getHours());
 		let currMinutes = formatTime(currTime.getMinutes());
-		let currSeconcd = formatTime(currTime.getSeconds());
-		time = `<h1>${currHours}:${currMinutes}:${currSeconcd}</h1>`;
-	}
-  // $('#clock').append('<h1></h1>');
-  $('#clock').append(time);
+		let currSeconds = formatTime(currTime.getSeconds());
+		let time = `<h1>${currHours}:${currMinutes}:${currSeconds}</h1>`;
 
-  // const timeString = `${currTime.getTime().getHours()}${currTime.getTime().getMinutes()}`;
-  // $('#clock h1').append(timeString);
+    $('#clock').html(time);
+	}
 
   function formatTime(timeInt) {
     return timeInt < 12 ? '0' + timeInt : timeInt;
   }
+
 });
