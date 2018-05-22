@@ -2,15 +2,61 @@ body {
     background-color: #80d4ea;
 }
 
+#options {
+  align-content: center;
+  text-align: center;
+  padding-top: 500px;
+}
+
 #clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+  height: 100px;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding-top: 80px;
+  font-family: curier, monospace;
+  text-align: center;
+  font-size: 80px;
+}
+
+
+
+h1 {
+  margin: 0px;
+}
+
+.button {
+  cursor: pointer;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Courier New;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 30px 10px 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.button:hover {
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+}
+
+.sienna {
+  color: sienna;
+}
+
+.indigo {
+  color: indigo;
+}
+
+.coral {
+  color: coral;
 }

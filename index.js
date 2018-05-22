@@ -1,1 +1,38 @@
 // Your code here
+// $(document).ready(function() {
+
+
+
+let getTime = function getTime() {
+  let date = new Date;
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+
+  let seconds =date.getSeconds();
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+
+  $('#clock').html(`The time is...<h1> ${hours}:${minutes}:${seconds} </h1>`);
+
+}
+  setInterval(getTime, 1000);
+
+$('.sienna').click( function() {
+    $('#clock').removeClass('white coral indigo').addClass('sienna');
+  });
+
+$('.coral').click( function() {
+    $('#clock').removeClass('white sienna indigo').addClass('coral');
+  });
+
+$('.indigo').click( function() {
+    $('#clock').removeClass('white coral sienna').addClass('indigo');
+  });
+
+
+// });
