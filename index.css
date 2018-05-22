@@ -3,14 +3,42 @@ body {
 }
 
 #clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+  height: 100px;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding-top: .2em;
+  font-family: courier, monospace;
+  text-align: center;
+  font-size: 100px;
+}
+
+.white {
+  color: white;
+}
+
+ul li {
+  list-style: none;
+  padding: 2em;
+  margin: 1em;
+  background-color: white;
+  width: 2em;
+  border-radius: 5px;
+}
+
+#blue-button, #purple-button, #gold-button {
+  font-weight: bold;
+}
+
+#blue-button, .blue {
+  color: #3A439A;
+}
+
+#purple-button, .purple {
+  color: #CB81EB;
+}
+
+#gold-button, .gold {
+  color: #FFD700;
 }
