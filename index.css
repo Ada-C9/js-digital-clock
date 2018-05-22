@@ -14,3 +14,42 @@ body {
     color: white;
     font-size: 100px;
 }
+#buttons{
+  display:flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+#blue-button{
+  border: 1px solid black;
+  padding: 3px;
+  background-color:blue;
+}
+#green-button{
+  border: 1px solid black;
+  padding: 3px;
+  background-color:green;
+}
+#orange-button{
+  border: 1px solid black;
+  padding: 3px;
+  background-color:orange;
+}
+
+#update-time{
+  border: 1px solid black;
+  padding: 3px;
+  background-color:gray;
+}
+
+.green{
+  color: green;
+}
+
+.blue{
+  color: blue;
+}
+
+.orange{
+  color:orange;
+}
