@@ -1,5 +1,7 @@
 body {
-    background-color: #80d4ea;
+    /* background-color: #80d4ea; */
+    background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b17df9dfa66151b46c4274468fdd6ca7&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
 }
 
 #clock {
@@ -11,6 +13,26 @@ body {
     padding-top: 70px;
     font-family: courier, monospace;
     text-align: center;
-    color: white;
     font-size: 100px;
+}
+
+.start-color {
+  color: #626D8C;
+}
+
+.blue {
+  color: #72A1E5;
+}
+
+.green {
+  color: #629677;
+}
+
+.pink {
+  color: #FAC8CD;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 5%;
 }
