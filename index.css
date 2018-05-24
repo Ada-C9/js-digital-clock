@@ -1,16 +1,59 @@
 body {
-    background-color: #80d4ea;
+    background-color: lightgray;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.buttons > div {
+  background-color: white;
+  text-align: center;
+  width: 100px;
+  height: 25px;
+  padding-top: 10px;
 }
 
 #clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
+    display: block;
     font-family: courier, monospace;
-    text-align: center;
     color: white;
+    text-align: center;
+    margin-top: 50px;
     font-size: 100px;
+}
+
+#clock-change {
+  width: 200px;
+}
+
+.red {
+  background-color: darkred;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: gold;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.purple {
+  background-color: indigo;
+}
+
+.hide {
+  display: none;
 }
