@@ -7,27 +7,17 @@
 
 
 const dateDisplay = () => {
-  console.log("in date display");
   const nows = new Date(Date.now());
-  console.log(nows);
+  $('#clock').empty();
+  $('#clock').append(`<li> This month is month ${nows.getMonth()} </li>`);
+  $('#clock').append(`<li> Today is day ${nows.getDay()} </li>`);
+  $('#clock').append(`<li>The hour is hour ${nows.getHours()}</li>`);
+  $('#clock').append(`<li>The minute is minute ${nows.getMinutes()}</li>`);
+  $('#clock').append(`<li>The second is second ${nows.getSeconds()}<li>`);
 
-
-  let day = nows.getDay();
-  console.log(day);
-
-  let hour = nows.getHours();
-  console.log(hour);
-  let minute = nows.getMinutes();
-  let second = nows.getSeconds();
-
-
-  $('#clock').html(nows);
-  $('#day').html(day);
-  $('#hour').html(hour);
-  $('#minute').html(minute);
-  $('#second').html(second);
 };
 
+
 $(document).ready(() => {
-  dateDisplay();
+  setInterval(dateDisplay, 1000);
 });
