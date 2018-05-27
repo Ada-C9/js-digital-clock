@@ -1,16 +1,33 @@
 body {
-    background-color: #80d4ea;
+  background-color: #80d4ea;
+}
+
+section {
+  display: inline-block;
 }
 
 #clock {
-    height: 100px;
+    height: 100%;
     width: 800px;
     margin: auto;
-    position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
     font-family: courier, monospace;
     text-align: center;
-    color: white;
     font-size: 100px;
+}
+
+.white-text {
+  color: white;
+}
+
+.pink {
+  color: #ED9AB6;
+}
+
+.teal {
+  color: #468B9D;
+}
+
+.green {
+  color: #B7AF52;
 }
