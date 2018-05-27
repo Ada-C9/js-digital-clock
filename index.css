@@ -14,3 +14,14 @@ body {
     color: white;
     font-size: 100px;
 }
+.blue {
+ background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
