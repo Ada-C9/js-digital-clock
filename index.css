@@ -1,16 +1,61 @@
 body {
     background-color: #80d4ea;
+    color: white;
+    font-family: courier, monospace;
+    text-align: center;
 }
 
 #clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+    margin-top: 15px;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+#clock > div {
+  border: 2.5px solid white;
+}
+
+#clock h4, #clock p {
+  font-size: 50px;
+}
+#time-type {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 2.5px 0;
+}
+
+#time-type:hover, .color-list li:hover {
+  color: #80d4ea;
+  background-color: white;
+}
+
+.red {
+ background-color: #ea8080;
+}
+
+.green {
+  background-color: #80eaad;
+}
+
+.purple {
+  background-color: #9f80ea;
+}
+
+.blue {
+  background-color: #80d4ea;
+}
+
+.color-list {
+  display: inline-flex;
+  list-style-type: none;
+  width: 75%;
+  justify-content: space-between;
+}
+
+.color-list li {
+  padding: 1px 10px;
+  margin: 0;
+  line-height: 2em;
+  font-size: 1.5em;
 }
